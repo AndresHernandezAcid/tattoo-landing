@@ -1,3 +1,2 @@
 # tattoo-landing
-A landing page por a tattoo store using some Js libraries
-AOSjs
+Landing page sketch for a tattoo store, using animate.css grid.css and wow.js libraries

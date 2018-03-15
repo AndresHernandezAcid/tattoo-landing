@@ -1,0 +1,149 @@
+@font-face { 
+    font-family: "calling"; 
+    src: URL("fonts/calling.ttf"); 
+} 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+/*-------------------*/
+/* Background styles */
+/*-------------------*/
+
+.background {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;		
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.background > div {
+    position: absolute;
+}
+
+/*-------------------*/
+/* Secciones-------- */
+/*-------------------*/
+
+#header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/color.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+#header::after{
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#header h1{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    z-index: 1;
+    font-family: "calling";
+    font-size: 15vw;
+    color: white;
+    justify-self: center;
+    align-self: auto;
+}
+
+#header h2{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    z-index: 1;
+    font-family: "calling";
+    font-size: 9vw;
+    color: white;
+    justify-self: center;
+    align-self: auto;
+}
+
+#uno {
+    background-image: url(images/man-2.jpg);
+}
+
+#uno .triangle{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 360px;
+    height: 360px;
+    justify-self: center;
+    align-self: auto;
+    background: url(images/ink.jpg);
+    background-position: 50% 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    filter: opacity(40%);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+
+#uno .triangle:hover{
+    filter: opacity(100%);
+}
+
+#dos {
+    background-image: url(images/alejandra.jpg);
+    background-position-y: 0%;
+}
+
+#dos::after{
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(118, 39, 44, 0.5);
+}
+
+#dos .circle{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 360px;
+    height: 360px;
+    justify-self: center;
+    align-self: auto;
+    width: 400px;
+    height: 400px;
+    background: url(images/ramona.jpg);
+    background-size: 406px;
+    background-position: 77% 24%;
+    background-repeat: no-repeat;
+    clip-path: circle(50% at 50% 50%);
+    filter: opacity(40%);
+    z-index: 1;
+}
+
+#dos .circle:hover{
+    filter: opacity(100%);
+}
